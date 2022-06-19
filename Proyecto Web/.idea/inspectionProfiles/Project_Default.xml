@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <replaceConfiguration name="Configurar Transactionals" description="Transactionals necesitan explicitar TransactionManager" suppressId="TransactionManager" problemDescriptor="Transactionals necesitan explicitar TransactionManager" text="@org.springframework.transaction.annotation.Transactional($params$)&#10;$MethodType$ $Method$($ParameterType$ $Parameter$) throws $NombreException$;" recursive="false" caseInsensitive="true" type="JAVA" pattern_context="member" reformatAccordingToStyle="true" shortenFQN="true" replacement="@org.springframework.transaction.annotation.Transactional(com.scanntech.analytics.services.config.repo.TransactionManagers.ANALYTICS)&#10;$MethodType$ $Method$($ParameterType$ $Parameter$) throws $NombreException$;">
+        <constraint name="__context__" within="" contains="" />
+        <constraint name="MethodType" within="" contains="" />
+        <constraint name="Method" within="" contains="" />
+        <constraint name="ParameterType" within="" contains="" />
+        <constraint name="Parameter" minCount="0" maxCount="2147483647" within="" contains="" />
+        <constraint name="NombreException" minCount="0" maxCount="2147483647" within="" contains="" />
+        <constraint name="params" minCount="0" maxCount="0" within="" contains="" />
+      </replaceConfiguration>
+      <replaceConfiguration name="RequerirPermisoAlImpersonar" uuid="6464845b-593f-31c5-93da-c210ae1fa7b0" description="&#10;Para la funcionalidad AN-49, de impersonar usuario final:&#10;Todo endpoint del paquete de com.scanntech.analytics.services.web.rest.api.user&#10;debe anotarse con @RequerirPermisoAlImpersonar y especificar en qué TipoImpersonacion el usuario autenticado debe de estar para poder hacer uso del endpoint&#10;http://confluence.scanntech.com/display/MP/AN-49+Permitir+a+usuarios+Admin+entrar+como+usuarios+normales#AN-49PermitirausuariosAdminentrarcomousuariosnormales-RequerirPermisoAlImpersonandoAdvicey@RequerirPermisoAlImpersonar" suppressId="RequerirPermisoAlImpersonar" problemDescriptor="http://confluence.scanntech.com/display/MP/AN-49+Permitir+a+usuarios+Admin+entrar+como+usuarios+normales#AN-49PermitirausuariosAdminentrarcomousuariosnormales-RequerirPermisoAlImpersonandoAdvicey@RequerirPermisoAlImpersonar" text="@$Annotation$&#10;@$Validar$&#10;$MethodType$ $Method$($ParameterType$ $Parameter$) throws $NombreException$;" recursive="false" caseInsensitive="true" type="JAVA" pattern_context="member" reformatAccordingToStyle="true" shortenFQN="false" replacement="@$Annotation$&#10;@RequerirPermisoAlImpersonar(permiso = PermisoImpersonacion.LECTURA_ESCRITURA)&#10;$MethodType$ $Method$($ParameterType$ $Parameter$) throws $NombreException$;">
+        <constraint name="__context__" within="" contains="" />
+        <constraint name="Annotation" regexp="GetMapping|PostMapping|PutMapping|PatchMapping|DeleteMapping" maxCount="2147483647" within="" contains="" />
+        <constraint name="MethodType" within="" contains="" />
+        <constraint name="Method" within="" contains="" />
+        <constraint name="ParameterType" within="" contains="" />
+        <constraint name="Parameter" minCount="0" maxCount="2147483647" within="" contains="" />
+        <constraint name="Validar" regexp="RequerirPermisoAlImpersonar" minCount="0" maxCount="0" within="" contains="" />
+        <constraint name="NombreException" minCount="0" maxCount="2147483647" within="" contains="" />
+      </replaceConfiguration>
+    </inspection_tool>
+  </profile>
+</component>

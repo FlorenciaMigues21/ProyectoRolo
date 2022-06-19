@@ -1,0 +1,42 @@
+<div style="margin-bottom: 100px;">
+  <h1>Crear usuario</h1>
+</div>
+
+<div style="margin-bottom: 50px">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Comentario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr (focus)="agregar()" *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.mail}}</td>
+        <td>{{user.comentario}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="input-group input-group-sm mb-3 entrada">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Nombre</span>
+  </div>
+  <input id="nombre" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+<div class="input-group input-group-sm mb-3 entrada">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Mail</span>
+  </div>
+  <input id="mail" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+<div class="input-group input-group-sm mb-3 entrada">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Comentario</span>
+  </div>
+  <input id="comentario" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+<button style="margin-left: 50%" class="btn btn-primary" (click)="agregar()" type="submit">Agregar</button>
